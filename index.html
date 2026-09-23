@@ -6,30 +6,359 @@
 <style>
 :root{--ink:#17302b;--muted:#63736f;--bg:#f4f7f5;--card:#fff;--green:#176b55;--green2:#2f8a6f;--mint:#e6f3ee;--gold:#c9963e;--line:#dce6e1;--blue:#3b6f8f;--red:#9d574d;--shadow:0 10px 30px rgba(20,55,45,.08)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}.hero{background:linear-gradient(120deg,#103f35,#176b55 58%,#2f8a6f);color:white;padding:44px 28px 34px}.wrap{max-width:1220px;margin:auto}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.15em;opacity:.78;font-weight:800}.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.04;margin:8px 0 10px}.hero p{max-width:850px;margin:0;color:#e7f4ef}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pill{border:1px solid rgba(255,255,255,.26);background:rgba(255,255,255,.1);border-radius:999px;padding:7px 12px;font-size:13px}.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);overflow:auto;white-space:nowrap}.nav .wrap{display:flex;gap:6px;padding:9px 18px}.nav a{color:var(--ink);text-decoration:none;font-size:13px;font-weight:700;padding:8px 10px;border-radius:8px}.nav a:hover{background:var(--mint);color:var(--green)}main{padding:28px 18px 60px}.section{margin:0 auto 34px;scroll-margin-top:65px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:14px}.section h2{margin:0;font-size:25px}.sub{color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:19px;box-shadow:var(--shadow)}.span3{grid-column:span 3}.span4{grid-column:span 4}.span5{grid-column:span 5}.span6{grid-column:span 6}.span7{grid-column:span 7}.span8{grid-column:span 8}.span12{grid-column:span 12}.kpi{font-size:31px;font-weight:850;color:var(--green);line-height:1}.kpi-label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:750;margin-top:7px}.tag{display:inline-block;background:var(--mint);color:var(--green);border-radius:999px;padding:5px 9px;font-size:12px;font-weight:800;margin:3px 4px 3px 0}.tag.gold{background:#fbf0dd;color:#815f24}.tag.blue{background:#e8f1f6;color:#356681}.tag.red{background:#f8e9e6;color:#884a42}.quote{border-left:4px solid var(--green2);padding-left:15px;font-size:18px;font-weight:700}.muted{color:var(--muted)}ul{padding-left:20px;margin:8px 0}li{margin:6px 0}.flow{display:grid;grid-template-columns:1fr 42px 1fr 42px 1fr;align-items:stretch}.flow .box{background:white;border:1px solid var(--line);border-radius:14px;padding:17px}.arrow{display:grid;place-items:center;color:var(--green);font-size:25px;font-weight:900}.box h3,.card h3{margin:0 0 8px;font-size:17px}.bar{height:8px;background:#edf2ef;border-radius:10px;overflow:hidden;margin-top:9px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--green2));border-radius:10px}.pestel{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.pestel .card{box-shadow:none}.letter{width:34px;height:34px;border-radius:10px;background:var(--green);color:white;display:grid;place-items:center;font-weight:900;margin-bottom:10px}.timeline{border-left:3px solid #cfe3db;margin-left:8px;padding-left:22px}.step{position:relative;margin:0 0 19px}.step:before{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--green);left:-29px;top:6px}.step strong{color:var(--green)}.accordion details{background:white;border:1px solid var(--line);border-radius:12px;margin:8px 0;overflow:hidden}.accordion summary{cursor:pointer;padding:14px 16px;font-weight:800;list-style:none}.accordion summary::-webkit-details-marker{display:none}.accordion details>div{padding:0 17px 16px;color:#42524e}.note{background:#fff9ed;border:1px solid #ead5a9;border-radius:13px;padding:15px;color:#624d26}.matrix{width:100%;border-collapse:collapse;font-size:13px}.matrix th,.matrix td{padding:11px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}.matrix th{color:var(--green);background:#f5faf8}.footer{padding:25px 18px 45px;color:var(--muted);font-size:12px;text-align:center}.source{font-size:12px;color:var(--muted);margin-top:12px}.bigidea{background:linear-gradient(135deg,#f0f8f5,#fff);border:1px solid #cfe3db}.bigidea h3{color:var(--green);font-size:22px}.badge{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--green)}@media(max-width:850px){.span3,.span4,.span5,.span6,.span7,.span8{grid-column:span 12}.pestel{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);height:35px}.hero{padding-top:34px}.matrix{display:block;overflow:auto}}
 @media print{.nav{display:none}.card{box-shadow:none}.hero{print-color-adjust:exact;-webkit-print-color-adjust:exact}.section{break-inside:avoid}}
-</style></head><body>
+</style>
+<style>
+.archive-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.archive-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 22px rgba(21,54,78,.05)}
+.archive-card h3{margin:6px 0 10px;color:var(--green)}
+.archive-card p,.archive-card li{font-size:13px;line-height:1.55}
+.archive-card .doc-type{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold)}
+.intel-table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}
+.intel-table th{background:#eef5f2;text-align:left;padding:10px;border:1px solid var(--line)}
+.intel-table td{padding:10px;border:1px solid var(--line);vertical-align:top;line-height:1.45}
+.maturity{display:inline-block;padding:4px 8px;border-radius:999px;font-size:10px;font-weight:800;white-space:nowrap}
+.m-green{background:#e6f4ec;color:#24613b}.m-yellow{background:#fff4cf;color:#765a00}.m-blue{background:#e8f1fb;color:#225b88}.m-red{background:#fbe9e7;color:#8b352d}
+.timeline-table td:first-child,.timeline-table th:first-child{width:23%}
+.callout-acervo{border-left:4px solid var(--gold);background:#fffaf0;padding:14px 16px;border-radius:10px;margin:14px 0;font-size:13px;line-height:1.55}
+@media(max-width:850px){.archive-grid{grid-template-columns:1fr}.intel-table{display:block;overflow-x:auto}}
+</style>
+
+
+<style>
+.meeting-seq{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
+.meeting-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 22px rgba(21,54,78,.05)}
+.meeting-head{display:flex;align-items:flex-start;gap:14px}
+.meeting-num{min-width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--green);color:#fff;font-weight:800;font-size:18px}
+.meeting-card h3{margin:2px 0 7px;color:var(--green)}
+.meeting-question{font-size:15px;font-weight:700;line-height:1.45;margin:10px 0;padding:11px 13px;background:#f3f7f5;border-radius:10px}
+.meeting-output{margin-top:12px;padding:11px 13px;border-left:4px solid var(--gold);background:#fffaf0;border-radius:8px;font-size:13px;line-height:1.5}
+.meeting-card ul{margin-top:8px}
+.meeting-card li{margin:5px 0;line-height:1.45}
+.next-cycle{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.next-topic{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fbfcfc;font-size:12px;font-weight:700}
+@media(max-width:850px){.next-cycle{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.next-cycle{grid-template-columns:1fr}}
+</style>
+
+
+<style>
+.deliverables-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.deliverable{border:1px solid var(--line);border-radius:12px;padding:15px;background:#fbfcfc}
+.deliverable h4{margin:0 0 7px;color:var(--green);font-size:14px}
+.deliverable p{margin:0;font-size:12.5px;line-height:1.5}
+.flow-final{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin:16px 0}
+.flow-final span{padding:8px 11px;border-radius:999px;background:#eef5f2;border:1px solid var(--line);font-size:12px;font-weight:800}
+.final-impact{border-left:4px solid var(--green);padding:14px 16px;background:#f3f7f5;border-radius:10px;margin-top:14px;line-height:1.55}
+@media(max-width:760px){.deliverables-grid{grid-template-columns:1fr}}
+</style>
+
+</head><body>
 <header class="hero"><div class="wrap"><div class="eyebrow">Governança Colaborativa • São José do Rio Preto</div><h1>Cluster Turismo</h1><p>BI qualitativo da 1ª reunião — organização das percepções, desafios, transformações, indicadores, ações e questões para aprofundamento.</p><div class="meta"><span class="pill">17/09/2026</span><span class="pill">13 participantes</span><span class="pill">10 reflexões estruturadas</span><span class="pill">Classificação: RESTRITA</span></div></div></header>
-<nav class="nav"><div class="wrap"><a href="#visao">Visão geral</a><a href="#trajetoria">Trajetória</a><a href="#diagnostico">Diagnóstico</a><a href="#pestel">PESTEL</a><a href="#futuro">Cenário 2036</a><a href="#transformacoes">Transformações</a><a href="#indicadores">Indicadores</a><a href="#acoes">Ações</a><a href="#dados">Dados</a><a href="#aprofundar">Aprofundar</a></div></nav>
+<nav class="nav"><div class="wrap"><a href="#visao">Visão geral</a><a href="#trajetoria">Trajetória</a><a href="#diagnostico">Diagnóstico</a><a href="#pestel">PESTEL</a><a href="#futuro">Cenário 2036</a><a href="#transformacoes">Transformações</a><a href="#indicadores">Indicadores</a><a href="#acoes">Ações</a><a href="#dados">Dados</a><a href="#aprofundar">Aprofundar</a><a href="#acervo">Acervo & Inteligência</a><a href="#execucao">Planejado × Executado</a><a href="#pautas">Sugestão de pautas</a></div></nav>
 <main class="wrap">
 <section id="visao" class="section"><div class="section-head"><div><div class="badge">Leitura executiva</div><h2>Visão geral da reunião</h2></div><div class="sub">Percepções do cluster — não equivalem, por si só, a fatos validados.</div></div>
 <div class="grid"><div class="card span3"><div class="kpi">13</div><div class="kpi-label">Participantes</div></div><div class="card span3"><div class="kpi">10</div><div class="kpi-label">Reflexões</div></div><div class="card span3"><div class="kpi">2036</div><div class="kpi-label">Horizonte desejado</div></div><div class="card span3"><div class="kpi">90%</div><div class="kpi-label">Referência de ocupação hoteleira</div></div>
 <div class="card span7 bigidea"><div class="badge">Síntese interpretativa</div><h3>O desafio central é conectar o ecossistema</h3><p>Rio Preto já reúne ativos de serviços, eventos e vocações turísticas. A reunião sugere que o avanço depende de <b>integrar atores, organizar processos, produzir inteligência e comunicar melhor o destino</b>.</p><span class="tag">Integração do trade</span><span class="tag">Comunicação</span><span class="tag">Eventos</span><span class="tag">Dados</span><span class="tag">Receptivo</span></div>
-<div class="card span5"><h3>Ativos e oportunidades percebidos</h3><p><span class="tag gold">Saúde</span><span class="tag gold">Educação</span><span class="tag gold">Comércio</span><span class="tag gold">Shopping</span><span class="tag gold">Grandes eventos</span><span class="tag gold">Caminho da Fé</span><span class="tag gold">Cicloturismo</span><span class="tag gold">Rota Caipira</span></p><p class="muted">Potencial de diversificação da oferta e fortalecimento do turismo de negócios e entretenimento.</p></div></div></section>
+<div class="card span5"><h3>Ativos e oportunidades percebidos</h3><p><span class="tag gold">Saúde</span><span class="tag gold">Educação</span><span class="tag gold">Comércio</span><span class="tag gold">Shopping</span><span class="tag gold">Grandes eventos</span><span class="tag gold">Caminho da Fé</span><span class="tag gold">Cicloturismo</span><span class="tag gold">Rota Caipira</span><span class="tag gold">Tecnologia</span></p><p class="muted">Potencial de diversificação da oferta e fortalecimento do turismo de negócios e entretenimento.</p></div></div></section>
 <section id="trajetoria" class="section"><div class="section-head"><div><div class="badge">Framework da Governança</div><h2>Cenário atual → transformação → cenário desejado</h2></div></div><div class="flow"><div class="box"><h3>Cenário atual</h3><ul><li>Trade pouco integrado</li><li>Comunicação e calendário a fortalecer</li><li>Processos de eventos fragmentados</li><li>Falta de indicadores consolidados</li><li>Lacuna em estrutura de maior capacidade para eventos</li></ul></div><div class="arrow">→</div><div class="box"><h3>Chaves de transformação</h3><ul><li>Governança e mobilização</li><li>Fluxo integrado para eventos</li><li>Receptivo e excelência no atendimento</li><li>Inteligência do turismo</li><li>Comunicação integrada do destino</li></ul></div><div class="arrow">→</div><div class="box"><h3>Cenário 2036</h3><ul><li>Referência nacional em negócios e entretenimento</li><li>Receptivo atuante e qualificado</li><li>Serviços reconhecidos pela excelência</li><li>Ambiente regulatório ágil e seguro</li><li>Impactos mensurados por indicadores</li></ul></div></div></section>
 <section id="diagnostico" class="section"><div class="section-head"><div><div class="badge">Reflexões 1–3</div><h2>Diagnóstico do cluster</h2></div></div><div class="grid"><div class="card span4"><h3>Desafio percebido</h3><p>A comunicação aparece como um dos principais desafios, conectada à infraestrutura, integração do trade e articulação regional.</p><div class="bar"><i style="width:92%"></i></div><small class="muted">Tema recorrente na reunião — barra apenas visual, sem escala quantitativa.</small></div><div class="card span4"><h3>Causa estruturante</h3><p><b>Baixa integração entre os atores do trade.</b> A atuação pouco articulada reduz mobilização, continuidade das iniciativas e envolvimento empresarial.</p></div><div class="card span4"><h3>Infraestrutura: nuance importante</h3><p>A discussão não caracteriza toda a infraestrutura turística como deficiente. A lacuna destacada é uma <b>estrutura de maior capacidade para eventos</b>, enquanto a rede hoteleira não apareceu como principal problema.</p></div>
 <div class="card span6"><h3>Ambiente urbano e experiência</h3><ul><li>Zeladoria urbana.</li><li>Pessoas em situação de rua como questão percebida pelo grupo.</li><li>Qualidade do acolhimento em todos os pontos de contato.</li><li>Integração regional e posicionamento dos atrativos.</li></ul></div><div class="card span6"><h3>Regulação de eventos</h3><p>O ponto central não é apenas “menos burocracia”: é <b>integrar o fluxo</b> entre órgãos e reduzir divergências, atrasos e incerteza na obtenção de autorizações.</p><span class="tag red">Alvarás</span><span class="tag red">Fiscalização</span><span class="tag red">Zoneamento</span><span class="tag red">Coordenação</span></div></div></section>
-<section id="pestel" class="section"><div class="section-head"><div><div class="badge">Síntese da reunião</div><h2>Análise PESTEL</h2></div></div><div class="pestel"><div class="card"><div class="letter">P</div><h3>Político</h3><p>Articulação entre Secretaria de Turismo, outras Secretarias, município, Estado, entidades e trade; política pública para eventos; CPL Turismo.</p></div><div class="card"><div class="letter">E</div><h3>Econômico</h3><p>Eventos, saúde, compras e educação; movimentação financeira, arrecadação, empregos e ocupação hoteleira. Falta linha de base consolidada.</p></div><div class="card"><div class="letter">S</div><h3>Social</h3><p>Hospitalidade, receptivo, participação do trade, comunicação, zeladoria e experiência de moradores e visitantes.</p></div><div class="card"><div class="letter">T</div><h3>Tecnológico</h3><p>Aplicativo, QR Code, Google, calendário, Observatório e influenciadores. Necessidade de arquitetura e governança de dados.</p></div><div class="card"><div class="letter">E</div><h3>Ambiental</h3><p>Não houve diagnóstico ambiental específico. Aprofundar sustentabilidade de eventos, mobilidade, resíduos e uso de recursos.</p></div><div class="card"><div class="letter">L</div><h3>Legal</h3><p>Legislação fragmentada, zoneamento, fiscalização, alvarás, celeridade e diferenciação por porte e complexidade do evento.</p></div></div></section>
+<section id="pestel" class="section"><div class="section-head"><div><div class="badge">Síntese da reunião</div><h2>Análise PESTEL</h2></div></div><div class="pestel"><div class="card"><div class="letter">P</div><h3>Político</h3><p>Articulação entre Secretaria de Turismo, outras Secretarias, município, Estado, entidades e trade; política pública para eventos; CPL Turismo.</p></div><div class="card"><div class="letter">E</div><h3>Econômico</h3><p>Eventos, saúde, compras, educação e <b>tecnologia</b>, reconhecida como importante eixo para a realização de eventos; movimentação financeira, arrecadação, empregos e ocupação hoteleira. Falta linha de base consolidada.</p></div><div class="card"><div class="letter">S</div><h3>Social</h3><p>Hospitalidade, receptivo, participação do trade, comunicação, zeladoria e experiência de moradores e visitantes.</p></div><div class="card"><div class="letter">T</div><h3>Tecnológico</h3><p>Aplicativo, QR Code, Google, calendário, Observatório e influenciadores. Necessidade de arquitetura e governança de dados.</p></div><div class="card"><div class="letter">E</div><h3>Ambiental</h3><p>Não houve diagnóstico ambiental específico. Aprofundar sustentabilidade de eventos, mobilidade, resíduos e uso de recursos.</p></div><div class="card"><div class="letter">L</div><h3>Legal</h3><p>Legislação fragmentada, zoneamento, fiscalização, alvarás, celeridade e diferenciação por porte e complexidade do evento.</p></div></div></section>
 <section id="futuro" class="section"><div class="section-head"><div><div class="badge">Reflexão 4</div><h2>Cenário desejado para 2036</h2></div></div><div class="card"><div class="quote">“Consolidar São José do Rio Preto como referência nacional em turismo de negócios e entretenimento.”</div><div class="grid" style="margin-top:18px"><div class="span4"><h3>Destino</h3><p>Maior capacidade de atrair eventos, visitantes e oportunidades.</p></div><div class="span4"><h3>Experiência</h3><p>Receptivo atuante, qualificado e excelência reconhecida no atendimento.</p></div><div class="span4"><h3>Ambiente regulatório</h3><p>Processos mais integrados, simples, ágeis e adequados aos diferentes eventos.</p></div></div></div></section>
 <section id="transformacoes" class="section"><div class="section-head"><div><div class="badge">Reflexão 5</div><h2>Chaves de transformação</h2></div></div><div class="grid"><div class="card span4"><h3>Pessoas & Educação</h3><p>Cultura de hospitalidade e qualificação de motoristas, taxistas, vendedores e demais pontos de contato.</p></div><div class="card span4"><h3>Empresas & Governança</h3><p>Mais participação do trade, compartilhamento de dados e atuação conjunta.</p></div><div class="card span4"><h3>Políticas Públicas</h3><p>Incentivo à realização de eventos e articulação efetiva entre Secretarias.</p></div><div class="card span4"><h3>Infraestrutura</h3><p>Dimensionar, com evidências, a necessidade e o porte de um Centro Regional de Eventos.</p></div><div class="card span4"><h3>Legislação & Processos</h3><p>Integração normativa e fluxo ágil, considerando porte e complexidade de cada evento.</p></div><div class="card span4"><h3>Tecnologia</h3><p>Integrar calendário, aplicativo, QR, Google e inteligência turística sem multiplicar canais desconectados.</p></div></div></section>
 <section id="indicadores" class="section"><div class="section-head"><div><div class="badge">Reflexão 6</div><h2>Como saberemos que avançamos?</h2></div></div><div class="grid"><div class="card span3"><div class="kpi">R$</div><div class="kpi-label">Movimentação financeira</div><p class="muted">Impacto econômico dos eventos.</p></div><div class="card span3"><div class="kpi">ISS+</div><div class="kpi-label">Arrecadação</div><p class="muted">Tributos associados à atividade.</p></div><div class="card span3"><div class="kpi">Jobs</div><div class="kpi-label">Empregos</div><p class="muted">Diretos e indiretos a metodologizar.</p></div><div class="card span3"><div class="kpi">90%</div><div class="kpi-label">Ocupação hoteleira</div><p class="muted">Número de vezes/ano em que a rede atinge ao menos esse patamar.</p></div><div class="card span12 note"><b>Próximo passo metodológico:</b> construir linha de base 2026/2027 e definir fonte, periodicidade, responsável e método de cada indicador. A reunião também pede permanência média, origem, gasto do visitante, satisfação, integração do trade e eficiência dos alvarás.</div></div></section>
 <section id="acoes" class="section"><div class="section-head"><div><div class="badge">Reflexão 7</div><h2>Primeiros avanços</h2></div></div><div class="grid"><div class="card span7"><div class="timeline"><div class="step"><strong>Curto prazo</strong><br>Fortalecer Visite Rio Preto e integração do trade; melhorar comunicação e calendário.</div><div class="step"><strong>Estruturação</strong><br>Reconhecimento como CPL Turismo e possibilidade de acesso a editais de fomento.</div><div class="step"><strong>Processo de eventos</strong><br>Articular Secretarias e avaliar fluxo único — modelo “Poupatempo/Ganha Tempo” para eventos.</div><div class="step"><strong>Até dez/2027</strong><br>Consolidação do Visite e ampliação da integração empresarial, conforme horizonte registrado.</div></div></div><div class="card span5"><h3>Agenda de execução sugerida pela própria estrutura do documento</h3><ul><li>Definir entregas de 90 dias, 6 meses e 12 meses.</li><li>Nomear responsáveis e prazos.</li><li>Pilotar calendário integrado.</li><li>Testar fluxo único antes de mudança estrutural.</li><li>Definir evidências de conclusão para cada ganho rápido.</li></ul></div></div></section>
 <section id="dados" class="section"><div class="section-head"><div><div class="badge">Reflexões 8–9</div><h2>Inteligência, dados e referências</h2></div></div><div class="grid"><div class="card span7"><h3>Dados prioritários</h3><table class="matrix"><tr><th>Bloco</th><th>O que acompanhar</th></tr><tr><td>Eventos</td><td>Número, porte, calendário, perfil e potencial de captação.</td></tr><tr><td>Visitantes</td><td>Quantidade, origem, permanência média e gasto médio.</td></tr><tr><td>Economia</td><td>Movimentação financeira, empregos, bares/restaurantes e arrecadação.</td></tr><tr><td>Fluxos</td><td>Ocupação hoteleira, fluxo aéreo e rodoviário.</td></tr><tr><td>Infraestrutura</td><td>Capacidade dos espaços existentes e evidências para dimensionar novo centro.</td></tr><tr><td>Saúde</td><td>Pacientes/acompanhantes de outras localidades e impactos em hospedagem, alimentação, transporte e comércio.</td></tr></table></div><div class="card span5"><h3>Benchmarks a investigar</h3><p><span class="tag blue">São Paulo</span><span class="tag blue">Joinville</span><span class="tag blue">Olímpia</span><span class="tag blue">Barretos</span><span class="tag blue">Rio de Janeiro</span><span class="tag blue">Belo Horizonte</span><span class="tag blue">Campinas</span><span class="tag blue">Foz do Iguaçu</span><span class="tag blue">Curitiba</span><span class="tag blue">Barcelona</span></p><p class="muted">As referências foram registradas como hipóteses de benchmarking. Práticas específicas devem ser verificadas documentalmente antes de serem adotadas como modelo.</p></div><div class="card span12"><h3>Observatório / Inteligência do Turismo</h3><p>O documento aponta a oportunidade de organizar uma base contínua capaz de mensurar impacto econômico, conhecer visitantes, identificar baixa demanda, orientar promoção e apoiar a captação de eventos. Também registra uma barreira de confiança no fornecimento de dados empresariais — aspecto que exige governança, agregação e credibilidade.</p></div></div></section>
 <section id="aprofundar" class="section"><div class="section-head"><div><div class="badge">Próximas reuniões</div><h2>Questões para aprofundar</h2></div><div class="sub">Seleção das perguntas já registradas no documento.</div></div><div class="accordion">
-<details open><summary>1. Cenário e prioridades</summary><div><ul><li>Quais desafios são conjunturais e quais são estruturais?</li><li>Quais segmentos devem ser prioridade: eventos, saúde, compras, educação, fé, cicloturismo, cultura ou outros?</li><li>Quais ativos já existem, mas são pouco conhecidos ou conectados?</li></ul></div></details>
+<details open><summary>1. Cenário e prioridades</summary><div><ul><li>Quais desafios são conjunturais e quais são estruturais?</li><li>Quais segmentos devem ser prioridade: eventos, saúde, compras, educação, <b>tecnologia</b>, fé, cicloturismo, cultura ou outros?</li><li>Quais ativos já existem, mas são pouco conhecidos ou conectados?</li></ul></div></details>
 <details><summary>2. Desafio central e causa-raiz</summary><div><ul><li>Comunicação é o principal desafio ou integração do trade e infraestrutura têm peso semelhante?</li><li>A falta de integração é causa-raiz ou consequência de ausência de governança, confiança, informação ou coordenação?</li><li>Quais causas estão ao alcance direto do cluster?</li></ul></div></details>
 <details><summary>3. Cenário 2036 e transformações</summary><div><ul><li>O que significará objetivamente ser referência nacional?</li><li>Qual posicionamento diferenciará Rio Preto?</li><li>Que competências, políticas, infraestrutura, legislação e tecnologia serão necessárias?</li></ul></div></details>
 <details><summary>4. Indicadores e dados</summary><div><ul><li>Qual a linha de base 2026/2027?</li><li>Quem fornecerá cada dado e com qual periodicidade?</li><li>Como medir turismo de saúde e impacto econômico dos eventos?</li><li>Como organizar um painel/Observatório contínuo?</li></ul></div></details>
 <details><summary>5. Ação e governança</summary><div><ul><li>Quais resultados cabem em 90 dias, 6 meses e 12 meses?</li><li>Quem será responsável por cada levantamento e articulação?</li><li>Quais conexões com outros clusters precisam ser mapeadas?</li><li>Quais decisões devem ser tomadas na próxima reunião para avançar do diagnóstico ao plano de ação?</li></ul></div></details>
 </div></section>
+
+<section id="acervo" class="section">
+  <div class="section-head">
+    <div><div class="badge">Memória estratégica</div><h2>Acervo & Inteligência já produzida pelo Cluster</h2></div>
+    <div class="sub">Camada documental separada das percepções da reunião de 17/09/2026.</div>
+  </div>
+
+  <div class="card bigidea">
+    <div class="badge">Por que esta camada existe</div>
+    <h3>Evitar recomeçar discussões que já avançaram</h3>
+    <p>Os materiais anteriores mostram que parte relevante da agenda atual já foi diagnosticada, planejada ou detalhada.
+    Esta seção não substitui a validação do cluster: organiza o que já existe para que a próxima rodada possa perguntar
+    <b>o que foi executado, o que continua válido e o que precisa ser atualizado</b>.</p>
+  </div>
+
+  <div class="archive-grid">
+    <div class="archive-card">
+      <div class="doc-type">Plano de Negócios 2025–2027</div>
+      <h3>Visite Rio Preto Convention & Visitors Bureau</h3>
+      <p><b>O que já foi construído:</b> proposta de valor, estrutura de governança, equipe, captação de eventos, marketing,
+      produtos turísticos, cronograma, indicadores, riscos e próximos passos.</p>
+      <p><b>Metas registradas:</b> 8 / 20 / 35 eventos captados nos anos 1–3; impacto econômico de R$ 3,5 mi / R$ 10 mi / R$ 20 mi.</p>
+      <p><b>Leitura para o BI:</b> o tema “Visite” já possui desenho operacional. A questão atual é validar o estágio real de implantação.</p>
+    </div>
+    <div class="archive-card">
+      <div class="doc-type">Compilado regulatório</div>
+      <h3>Leis relacionadas à realização de eventos</h3>
+      <p><b>O que já foi construído:</b> 41 registros organizados em <i>Lei → Objetivo → Aplicação atual → Sugestão</i>,
+      cobrindo alvarás, uso de bens públicos, AVCB, segurança, saúde, meia-entrada, ISSQN, ART, acessibilidade e outras exigências.</p>
+      <p><b>Leitura para o BI:</b> a percepção atual de legislação/processos fragmentados já possui um diagnóstico operacional que pode
+      ser convertido em agenda de simplificação e revisão.</p>
+    </div>
+    <div class="archive-card">
+      <div class="doc-type">Agenda estratégica</div>
+      <h3>Agenda Rio Preto Turismo</h3>
+      <p><b>O que já foi construído:</b> dois desafios estruturantes — turismo regional e turismo de negócios — com metas,
+      ações e indicadores para 2028 e 2030.</p>
+      <p><b>Eixos explicitados:</b> Médico/Hospitalar, Agronegócios, <b>Tecnologia da Informação</b> e Educação; fortalecimento do Visite,
+      calendário de eventos, inventário de espaços e atualização da legislação.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <div class="badge">Convergências</div><h3>O que o acervo revela sobre a discussão atual</h3>
+    <table class="intel-table">
+      <thead><tr><th>Tema atual do BI</th><th>O que já havia sido produzido</th><th>Leitura para a Governança</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><b>Visite pouco conhecido / necessidade de estruturação</b></td><td>Plano de Negócios 2025–2027 com governança, equipe, captação, comunicação, produtos, KPIs, riscos e cronograma.</td><td>Não reabrir do zero o desenho institucional; verificar implantação, adesão do trade e resultados.</td><td><span class="maturity m-yellow">Validar execução</span></td></tr>
+        <tr><td><b>Legislação e processos fragmentados</b></td><td>Compilado regulatório com aplicação atual e sugestões de revisão para dezenas de requisitos de eventos.</td><td>Converter o material em mapa de gargalos: manter, simplificar, esclarecer responsabilidade, atualizar ou revisar.</td><td><span class="maturity m-blue">Agenda regulatória</span></td></tr>
+        <tr><td><b>Calendário pouco integrado/divulgado</b></td><td>A Agenda já previa ampliar uso e divulgação do calendário municipal e acompanhar acessos.</td><td>Medir o que avançou e decidir arquitetura de calendário, governança da informação e canais.</td><td><span class="maturity m-yellow">Atualizar status</span></td></tr>
+        <tr><td><b>Tecnologia como eixo para eventos</b></td><td>A Agenda define Tecnologia da Informação como segmento prioritário; o Plano cita Tech Summit e ferramentas digitais.</td><td>A inclusão nominal de tecnologia no BI atual é coerente com a memória estratégica do cluster.</td><td><span class="maturity m-green">Convergência forte</span></td></tr>
+        <tr><td><b>Estrutura para eventos de maior porte</b></td><td>A Agenda propõe espaço multiuso para 3.000 pessoas e inventário/recuperação de espaços existentes.</td><td>Atualizar viabilidade, capacidade instalada, uso dos espaços e eventual necessidade de novo equipamento.</td><td><span class="maturity m-yellow">Revalidar</span></td></tr>
+        <tr><td><b>Comunicação do destino</b></td><td>Plano prevê website, app, redes sociais, newsletter, guia do organizador, vídeo e kit de imprensa.</td><td>Separar o que já existe do que ainda precisa ser criado e medir alcance/uso.</td><td><span class="maturity m-blue">Inventariar execução</span></td></tr>
+        <tr><td><b>Falta de indicadores consolidados</b></td><td>Plano define eventos captados, participantes, impacto econômico, ocupação, associados, room tax, alcance digital e NPS; Agenda traz indicadores próprios.</td><td>Há uma base para selecionar o conjunto oficial de KPIs do cluster e definir fonte, periodicidade e responsável.</td><td><span class="maturity m-green">Pronto para validar</span></td></tr>
+        <tr><td><b>Integração do trade</b></td><td>O Plano estrutura associação, governança, associados, parcerias e mecanismos de financiamento.</td><td>A próxima rodada pode medir adesão real em vez de discutir apenas a necessidade de integração.</td><td><span class="maturity m-yellow">Medir adesão</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <div class="badge">Maturidade documental</div><h3>Como usar o acervo</h3>
+    <p><span class="maturity m-green">Já estruturado documentalmente</span> proposta suficientemente desenvolvida para ser validada, não redesenhada do zero.</p>
+    <p><span class="maturity m-yellow">Precisa atualização/validação</span> há material anterior, mas falta saber o estágio atual.</p>
+    <p><span class="maturity m-blue">Pode entrar na agenda atual</span> conteúdo anterior continua aderente e pode virar decisão/ação.</p>
+    <p><span class="maturity m-red">Lacuna de execução/informação</span> existe intenção ou proposta, mas o material disponível não comprova implementação.</p>
+  </div>
+
+  <div class="callout-acervo"><b>Regra metodológica:</b> esta aba é uma camada de memória estratégica.
+  As metas e números apresentados são aqueles registrados nos documentos anteriores e <b>não são tratados automaticamente como resultados realizados</b>.</div>
+</section>
+
+<section id="execucao" class="section">
+  <div class="section-head">
+    <div><div class="badge">Gestão da continuidade</div><h2>Do Planejado ao Executado</h2></div>
+    <div class="sub">Matriz para transformar memória documental em acompanhamento.</div>
+  </div>
+
+  <div class="card bigidea">
+    <div class="badge">Pergunta central</div>
+    <h3>O que aconteceu entre o planejamento e a execução?</h3>
+    <p>O Plano de Negócios previa operação plena do Visite a partir de 2026 e definiu critérios objetivos de validação.
+    A Agenda Rio Preto Turismo também estabeleceu metas para 2028 e 2030. O BI passa a registrar essas referências para que
+    o cluster possa atualizar a situação real, sem presumir que tenham sido executadas.</p>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <table class="intel-table timeline-table">
+      <thead><tr><th>Previsto no acervo</th><th>Prazo/meta original</th><th>Referência de acompanhamento</th><th>Situação atual no material disponível</th><th>Próxima decisão</th></tr></thead>
+      <tbody>
+        <tr><td><b>Estruturar o Visite Rio Preto</b></td><td>Estruturação e operação previstas para 2026.</td><td>Constituição jurídica, sede, equipe, associados e parcerias.</td><td><span class="maturity m-red">Não confirmada</span> Os arquivos fornecidos trazem o plano, não evidência suficiente do estágio de execução.</td><td>Atualizar status item a item e nomear responsáveis.</td></tr>
+        <tr><td><b>Validar adesão do trade</b></td><td>Critério do plano: mínimo de 25 associados fundadores e 70% dos hotéis aderindo à room tax.</td><td>Nº de associados; adesão dos hotéis; receita recorrente.</td><td><span class="maturity m-red">Não confirmada</span></td><td>Realizar/atualizar pesquisa formal de adesão.</td></tr>
+        <tr><td><b>Captar eventos</b></td><td>Plano: pelo menos 5 eventos confirmados para 2026; meta Ano 1: 8 eventos captados.</td><td>Eventos captados, participantes e impacto econômico.</td><td><span class="maturity m-red">Não confirmada</span></td><td>Levantar pipeline e eventos efetivamente captados.</td></tr>
+        <tr><td><b>Fortalecer turismo regional</b></td><td>Agenda: evolução de “Regular” para “Satisfatório” até 2028.</td><td>Atuação regional e participação em eventos/estratégias/planos da região.</td><td><span class="maturity m-yellow">Precisa atualização</span></td><td>Definir critério objetivo para Regular/Satisfatório e medir 2026.</td></tr>
+        <tr><td><b>Priorizar turismo de negócios</b></td><td>Agenda: Médico/Hospitalar, Agronegócios, Tecnologia da Informação e Educação.</td><td>Eventos captados/realizados por segmento prioritário.</td><td><span class="maturity m-blue">Diretriz existente</span></td><td>Validar se os quatro segmentos permanecem prioritários e estabelecer metas.</td></tr>
+        <tr><td><b>Calendário de eventos</b></td><td>Agenda previa aumentar uso e divulgação; indicadores com metas progressivas.</td><td>Acessos, cobertura do calendário, atualização e integração de fontes.</td><td><span class="maturity m-yellow">Precisa atualização</span></td><td>Obter linha de base atual e definir governança do calendário.</td></tr>
+        <tr><td><b>Atualizar legislação de turismo e eventos</b></td><td>Ação expressa da Agenda.</td><td>Compilado regulatório com 41 registros e sugestões.</td><td><span class="maturity m-blue">Diagnóstico disponível</span></td><td>Priorizar alterações por impacto, competência e viabilidade jurídica.</td></tr>
+        <tr><td><b>Estrutura para grandes eventos</b></td><td>Agenda: espaço com infraestrutura para mais de 3.000 pessoas; proposta de Centro de Convenções Multiuso.</td><td>Capacidade, ocupação, agenda, investimentos e modelo de viabilidade.</td><td><span class="maturity m-yellow">Precisa revalidar</span></td><td>Inventariar espaços atuais e atualizar estudo de demanda/viabilidade.</td></tr>
+        <tr><td><b>Comunicação e promoção</b></td><td>Plano: website, app, redes, materiais, campanhas e relacionamento B2B.</td><td>Ferramentas implantadas, alcance, leads, organizadores e NPS.</td><td><span class="maturity m-red">Execução não comprovada pelos arquivos</span></td><td>Inventariar canais existentes e resultados.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid" style="margin-top:18px">
+    <div class="card span6">
+      <div class="badge">Plano do Convention Bureau</div><h3>Critérios originais de validação</h3>
+      <ul>
+        <li>Mínimo de <b>25 associados fundadores</b>.</li>
+        <li><b>70% dos hotéis</b> aderindo à room tax.</li>
+        <li>Pelo menos <b>5 eventos confirmados para 2026</b>.</li>
+        <li>Equipe principal contratada e operacional.</li>
+        <li>Parcerias estratégicas formalizadas.</li>
+      </ul>
+      <p class="muted">São metas do documento de 2025; o acervo fornecido não comprova seu atingimento.</p>
+    </div>
+    <div class="card span6">
+      <div class="badge">Agenda Rio Preto Turismo</div><h3>Indicadores que podem alimentar o BI</h3>
+      <ul>
+        <li>Nível de atuação de Rio Preto no turismo regional.</li>
+        <li>Participação em eventos, estratégias e planos regionais.</li>
+        <li>Clareza das temáticas econômicas do turismo de negócios.</li>
+        <li>Infraestrutura para turismo de negócios.</li>
+        <li>Organização institucional, administrativa e regulatória.</li>
+        <li>Acessos ao calendário, PITs, usuários do app e eventos de maior porte.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <div class="badge">Próxima rodada</div><h3>Decisões que esta camada permite buscar</h3>
+    <div class="grid">
+      <div class="span6"><ul>
+        <li>Validar quais propostas anteriores continuam vigentes.</li>
+        <li>Atualizar o estágio real do Visite Rio Preto.</li>
+        <li>Escolher os KPIs oficiais do cluster e suas linhas de base.</li>
+        <li>Priorizar 5–10 gargalos regulatórios do compilado de leis.</li>
+      </ul></div>
+      <div class="span6"><ul>
+        <li>Definir responsáveis e prazos para cada atualização.</li>
+        <li>Confirmar os segmentos prioritários de captação de eventos.</li>
+        <li>Atualizar a necessidade/viabilidade de infraestrutura de grande porte.</li>
+        <li>Transformar o acervo em plano de ação, evitando reiniciar diagnósticos já feitos.</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <p class="source">Fontes desta camada: Plano de Negócios Visite Rio Preto Convention & Visitors Bureau 2025–2027; Compilado de Leis relacionadas à realização de eventos; Agenda Rio Preto Turismo. Situações de execução não comprovadas nos materiais são explicitamente marcadas como “não confirmadas” ou “precisa atualização”.</p>
+</section>
+
+
+<section id="pautas" class="section">
+  <div class="section-head">
+    <div><div class="badge">Próximas reuniões</div><h2>Sugestão de pautas de reuniões</h2></div>
+    <div class="sub">Sequência proposta a partir do diagnóstico atual e do acervo já produzido pelo Cluster Turismo.</div>
+  </div>
+
+  <div class="card bigidea">
+    <div class="badge">Orientação do próximo ciclo</div>
+    <h3>Do diagnóstico para validação, priorização e decisão</h3>
+    <p>O cluster já acumulou percepções, diagnósticos, propostas, metas e indicadores. A sugestão é que as próximas reuniões
+    deixem de ser encontros amplos de diagnóstico e passem a terminar com <b>decisões, responsáveis, indicadores e próximos passos</b>.</p>
+  </div>
+
+  <div class="meeting-seq">
+    <div class="meeting-card">
+      <div class="meeting-head"><div class="meeting-num">1</div><div><h3>Do planejado ao executado: onde estamos?</h3>
+      <div class="meeting-question">“De tudo o que Rio Preto já planejou para o Turismo, o que foi executado, o que está em andamento, o que não avançou e o que ainda faz sentido?”</div></div></div>
+      <ul>
+        <li>Usar a aba <b>Planejado × Executado</b> como roteiro da reunião.</li>
+        <li>Revisar iniciativas do Plano de Negócios, Agenda Rio Preto Turismo e demais ações já propostas.</li>
+        <li>Classificar cada iniciativa: <b>Executada / Em andamento / Não iniciada / Descontinuada / Precisa ser atualizada</b>.</li>
+        <li>Registrar evidência, responsável e próximo passo.</li>
+      </ul>
+      <div class="meeting-output"><b>Entrega esperada:</b> linha de base 2026 da Governança do Turismo, mostrando com clareza de onde o cluster está partindo.</div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-head"><div class="meeting-num">2</div><div><h3>Visite Rio Preto e governança do Turismo</h3>
+      <div class="meeting-question">“Qual deve ser, efetivamente, o papel do Visite Rio Preto e como organizar a governança do turismo?”</div></div></div>
+      <ul>
+        <li>Validar o estágio real do Visite Rio Preto.</li>
+        <li>Definir relação entre Visite, poder público, entidades e trade.</li>
+        <li>Debater participação dos associados, financiamento, equipe mínima e responsabilidades.</li>
+        <li>Evitar redesenhar do zero o Convention Bureau: partir do Plano de Negócios já existente.</li>
+      </ul>
+      <div class="meeting-output"><b>Entrega esperada:</b> desenho simples de governança — <b>Quem lidera → Quem participa → Quem executa → Quem financia → Quem mede</b>.</div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-head"><div class="meeting-num">3</div><div><h3>Rio Preto como destino de eventos</h3>
+      <div class="meeting-question">“Que eventos Rio Preto quer atrair?”</div></div></div>
+      <ul>
+        <li>Validar os segmentos prioritários já apontados: <b>Médico/Hospitalar, Agronegócios, Tecnologia da Informação e Educação</b>.</li>
+        <li>Avaliar também entretenimento, esportes e outros segmentos identificados pelo cluster.</li>
+        <li>Mapear eventos existentes no Brasil com potencial de captação.</li>
+        <li>Identificar vantagens competitivas de Rio Preto e lacunas que dificultam a atração desses eventos.</li>
+      </ul>
+      <div class="meeting-output"><b>Entrega esperada:</b> primeira <b>Matriz de Captação de Eventos de São José do Rio Preto</b>, com 3 a 5 segmentos prioritários e oportunidades-alvo.</div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-head"><div class="meeting-num">4</div><div><h3>Ambiente regulatório e facilidade para realizar eventos</h3>
+      <div class="meeting-question">“O que hoje torna mais difícil realizar um evento em Rio Preto e o que pode ser simplificado?”</div></div></div>
+      <ul>
+        <li>Usar o compilado regulatório já produzido como base técnica.</li>
+        <li>Agrupar os requisitos por temas: alvarás/licenciamento, segurança, saúde, uso do espaço público, tributação, documentação, acessibilidade e outros.</li>
+        <li>Priorizar os <b>5 a 10 gargalos de maior impacto</b>, em vez de discutir todos de uma vez.</li>
+        <li>Para cada gargalo: problema → norma/processo → órgão responsável → impacto → solução possível → encaminhamento.</li>
+      </ul>
+      <div class="meeting-output"><b>Entrega esperada:</b> <b>Agenda de Simplificação para Eventos</b>, priorizada e com responsáveis por encaminhamento.</div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-head"><div class="meeting-num">5</div><div><h3>Inteligência Turística: quais números vamos acompanhar?</h3>
+      <div class="meeting-question">“Como saberemos, daqui a dois ou três anos, se o turismo de Rio Preto realmente avançou?”</div></div></div>
+      <ul>
+        <li>Revisar indicadores já propostos no Plano de Negócios e na Agenda Rio Preto Turismo.</li>
+        <li>Selecionar aproximadamente <b>8 a 12 indicadores estratégicos</b>, evitando excesso de métricas.</li>
+        <li>Definir para cada indicador: conceito, fonte, linha de base, periodicidade, responsável e meta.</li>
+        <li>Considerar eventos captados, participantes, impacto econômico, ocupação hoteleira, adesão do trade, calendário, alcance digital, NPS e infraestrutura.</li>
+      </ul>
+      <div class="meeting-output"><b>Entrega esperada:</b> <b>Painel oficial de indicadores do Cluster Turismo</b>, com metodologia e responsabilidades definidas.</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <div class="badge">Resultado do primeiro ciclo</div>
+    <h3>O que esperamos construir ao final das cinco reuniões</h3>
+    <p style="font-size:15px;line-height:1.7;text-align:center"><b>Memória → Linha de base → Prioridades → Governança → Projetos → Indicadores → Responsáveis</b></p>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <div class="badge">Segundo ciclo</div>
+    <h3>Pautas que podem vir na sequência</h3>
+    <p>Depois das cinco questões estruturantes, o cluster poderá aprofundar temas específicos com uma base de decisão mais sólida:</p>
+    <div class="next-cycle">
+      <div class="next-topic">Infraestrutura e Centro de Eventos</div>
+      <div class="next-topic">Calendário e comunicação do destino</div>
+      <div class="next-topic">Receptivo e hospitalidade</div>
+      <div class="next-topic">Turismo regional e Rota Caipira</div>
+      <div class="next-topic">Tecnologia aplicada ao turismo</div>
+      <div class="next-topic">Conexões com os demais clusters</div>
+    </div>
+  </div>
+
+  
+  <div class="card" style="margin-top:18px">
+    <div class="badge">Entregas esperadas</div>
+    <h3>O que teremos ao final das cinco reuniões</h3>
+    <p>O ciclo foi desenhado para transformar o acúmulo de diagnósticos e documentos do cluster em uma base organizada de gestão da estratégia do Turismo.</p>
+
+    <div class="deliverables-grid">
+      <div class="deliverable"><h4>1. Linha de base 2026 do Turismo</h4><p>Mapa do que já foi planejado, executado, está em andamento, não avançou ou precisa ser atualizado. <b>Contribuição:</b> evita reiniciar discussões e estabelece o ponto real de partida.</p></div>
+      <div class="deliverable"><h4>2. Modelo de Governança do Turismo</h4><p>Definição de papéis do Visite Rio Preto, poder público, trade e entidades. <b>Contribuição:</b> esclarece quem lidera, participa, executa, financia e mede.</p></div>
+      <div class="deliverable"><h4>3. Estratégia de captação de eventos</h4><p>Segmentos prioritários e primeira matriz de oportunidades de eventos. <b>Contribuição:</b> transforma vocações econômicas e turísticas em foco comercial para atração de eventos.</p></div>
+      <div class="deliverable"><h4>4. Agenda de Simplificação para Eventos</h4><p>Gargalos regulatórios priorizados, processos envolvidos e encaminhamentos. <b>Contribuição:</b> converte a percepção de burocracia em uma agenda objetiva de melhoria do ambiente de eventos.</p></div>
+      <div class="deliverable"><h4>5. Painel oficial de indicadores</h4><p>Conjunto enxuto de indicadores com conceito, fonte, linha de base, periodicidade, responsável e metas quando aplicável. <b>Contribuição:</b> permite acompanhar resultados e evolução do turismo ao longo do tempo.</p></div>
+      <div class="deliverable"><h4>6. Carteira de projetos prioritários</h4><p>Organização das principais iniciativas com responsável, prazo, indicador e status. <b>Contribuição:</b> conecta estratégia à execução e facilita o acompanhamento da Governança.</p></div>
+      <div class="deliverable"><h4>7. Agenda para o próximo ciclo</h4><p>Temas estruturantes organizados para aprofundamento posterior: infraestrutura, calendário, receptivo, turismo regional, tecnologia e interclusters. <b>Contribuição:</b> dá continuidade ao trabalho sem dispersão de prioridades.</p></div>
+      <div class="deliverable"><h4>8. Base de Inteligência</h4><p>Demandas de dados, linhas de base e indicadores organizados para acompanhamento. <b>Contribuição:</b> cria condições para apoiar a Governança com evidências e monitoramento. O Centro de Estudos Econômicos da ACIRP pode apoiar aqui.</p></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <div class="badge">Contribuição para o todo</div>
+    <h3>Da discussão à gestão da estratégia</h3>
+    <p>Ao final do ciclo, a Governança deverá ter condições de avançar de perguntas amplas sobre problemas e oportunidades para uma lógica estruturada de acompanhamento:</p>
+    <div class="flow-final">
+      <span>Onde estamos</span><b>→</b><span>Onde queremos chegar</span><b>→</b><span>O que já existe</span><b>→</b><span>O que falta</span><b>→</b><span>O que priorizar</span><b>→</b><span>Quem fará</span><b>→</b><span>Como medir</span>
+    </div>
+    <div class="final-impact"><b>Resultado esperado:</b> o BI deixa de funcionar apenas como memória das reuniões e passa progressivamente a atuar como <b>instrumento de gestão da estratégia do Cluster Turismo</b>, conectando memória, linha de base, prioridades, governança, projetos, indicadores e responsáveis.</div>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <div class="badge">Visão consolidada</div>
+    <h3>Possível produto ao final do ciclo</h3>
+    <p style="font-size:16px;line-height:1.6;text-align:center"><b>Agenda Estratégica do Turismo de São José do Rio Preto — 2026–2036</b><br>
+    <span style="color:var(--muted)">Diagnóstico + Governança + Prioridades + Projetos + Indicadores</span></p>
+    <p class="muted">O nome e a formalização desse produto devem ser validados pelo Cluster Turismo; aqui ele aparece como resultado possível da metodologia proposta.</p>
+  </div>
+
+<p class="source">Esta sequência é uma proposta metodológica construída a partir do diagnóstico da reunião de 17/09/2026 e do acervo documental incorporado ao BI. As pautas devem ser validadas pelo Cluster Turismo antes de sua adoção como agenda oficial.</p>
+</section>
+
 <section class="section"><div class="card bigidea"><div class="badge">Conexões interclusters</div><h3>Turismo não deve ser analisado isoladamente</h3><p>A própria reunião registra a necessidade de cruzar os temas dos diferentes clusters. Para a Governança Colaborativa, Turismo tende a se conectar especialmente a infraestrutura/logística, TIC, economia criativa, desenvolvimento urbano, serviços, indústria de eventos e sustentabilidade — conexões que devem ser confirmadas e detalhadas nas próximas rodadas.</p></div><p class="source">Fonte: anotações consolidadas da 1ª reunião do Cluster Turismo, 17/09/2026. Este BI organiza o conteúdo qualitativo do encontro; não transforma percepções em dados validados. Afirmações sobre benchmarks e referências externas permanecem como itens a verificar.</p></section>
-</main><footer class="footer">Governança Colaborativa SJRP • Cluster Turismo • BI qualitativo da reunião de 17/09/2026</footer>
+</main><footer class="footer">Governança Colaborativa SJRP • Cluster Turismo • BI qualitativo da reunião de 17/09/2026 + camada de acervo e inteligência documental</footer>
 </body></html>
