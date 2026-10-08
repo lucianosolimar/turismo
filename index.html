@@ -34,6 +34,13 @@
 .meeting-output{margin-top:12px;padding:11px 13px;border-left:4px solid var(--gold);background:#fffaf0;border-radius:8px;font-size:13px;line-height:1.5}
 .meeting-card ul{margin-top:8px}
 .meeting-card li{margin:5px 0;line-height:1.45}
+.meeting-status{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:850;letter-spacing:.06em;text-transform:uppercase;margin:2px 0 8px}
+.meeting-status.done{background:#e6f3ee;color:#176b55;border:1px solid #bcd9ce}
+.meeting-status.next{background:#fff3dc;color:#815f24;border:1px solid #ead5a9}
+.meeting-status.planned{background:#eef3f5;color:#526b75;border:1px solid #d6e0e4}
+.meeting-card.done-card{border-color:#bcd9ce;background:linear-gradient(135deg,#f7fcfa,#fff)}
+.meeting-card.done-card .meeting-num{background:#176b55}
+.meeting-card.done-card .meeting-output{border-left-color:#176b55;background:#f0f8f5}
 .next-cycle{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
 .next-topic{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fbfcfc;font-size:12px;font-weight:700}
 @media(max-width:850px){.next-cycle{grid-template-columns:1fr 1fr}}
@@ -74,11 +81,11 @@
 @media(max-width:760px){.evidence-grid{grid-template-columns:1fr}}
 </style>
 </head><body>
-<header class="hero"><div class="wrap"><div class="eyebrow">Governança Colaborativa • São José do Rio Preto</div><h1>Cluster Turismo</h1><p>BI qualitativo da 1ª reunião — organização das percepções, desafios, transformações, indicadores, ações e questões para aprofundamento.</p><div class="meta"><span class="pill">17/09/2026</span><span class="pill">13 participantes</span><span class="pill">10 reflexões estruturadas</span><span class="pill">Classificação: RESTRITA</span></div></div></header>
+<header class="hero"><div class="wrap"><div class="eyebrow">Governança Colaborativa • São José do Rio Preto</div><h1>Cluster Turismo</h1><p>BI evolutivo do Cluster Turismo — diagnóstico, cenário desejado, inteligência, governança, ações e aprendizados das reuniões.</p><div class="meta"><span class="pill">17/09/2026</span><span class="pill">13 participantes</span><span class="pill">10 reflexões estruturadas</span><span class="pill">Classificação: RESTRITA</span></div></div></header>
 <nav class="nav"><div class="wrap"><a href="#visao">Visão geral</a><a href="#trajetoria">Trajetória</a><a href="#diagnostico">Diagnóstico</a><a href="#pestel">PESTAL</a><a href="#futuro">Cenário 2036</a><a href="#transformacoes">Transformações</a><a href="#indicadores">Indicadores</a><a href="#acoes">Ações</a><a href="#dados">Dados</a><a href="#aprofundar">Aprofundar</a><a href="#acervo">Acervo & Inteligência</a><a href="#execucao">Planejado × Executado</a><a href="#pautas">Sugestão de pautas</a><a href="#atualizacao">Atualizações do Cluster</a><a href="#conjuntura">Conjuntura 2019–2025</a></div></nav>
 <main class="wrap">
 <section id="visao" class="section"><div class="section-head"><div><div class="badge">Leitura executiva</div><h2>Visão geral da reunião</h2></div><div class="sub">Percepções do cluster — não equivalem, por si só, a fatos validados.</div></div>
-<div class="grid"><div class="card span3"><div class="kpi">13</div><div class="kpi-label">Participantes</div></div><div class="card span3"><div class="kpi">10</div><div class="kpi-label">Reflexões</div></div><div class="card span3"><div class="kpi">2036</div><div class="kpi-label">Horizonte desejado</div></div><div class="card span3"><div class="kpi">90%</div><div class="kpi-label">Referência de ocupação hoteleira</div></div>
+<div class="grid"><div class="card span6"><div class="kpi">2036</div><div class="kpi-label">Horizonte desejado</div></div><div class="card span6"><div class="kpi">90%</div><div class="kpi-label">Referência de ocupação hoteleira</div></div>
 <div class="card span7 bigidea"><div class="badge">Síntese interpretativa</div><h3>O desafio central é conectar o ecossistema</h3><p>Rio Preto já reúne ativos de serviços, eventos e vocações turísticas. A reunião sugere que o avanço depende de <b>integrar atores, organizar processos, produzir inteligência e comunicar melhor o destino</b>.</p><span class="tag">Integração do trade</span><span class="tag">Comunicação</span><span class="tag">Eventos</span><span class="tag">Dados</span><span class="tag">Receptivo</span></div>
 <div class="card span5"><h3>Ativos e oportunidades percebidos</h3><p><span class="tag gold">Saúde</span><span class="tag gold">Educação</span><span class="tag gold">Comércio</span><span class="tag gold">Shopping</span><span class="tag gold">Grandes eventos</span><span class="tag gold">Caminho da Fé</span><span class="tag gold">Cicloturismo</span><span class="tag gold">Rota Caipira de Cicloturismo</span><span class="tag gold">Tecnologia</span></p><p class="muted">Potencial de diversificação da oferta e fortalecimento do turismo de negócios e entretenimento.</p></div></div></section>
 <section id="trajetoria" class="section"><div class="section-head"><div><div class="badge">Framework da Governança</div><h2>Cenário atual → transformação → cenário desejado</h2></div></div><div class="flow"><div class="box"><h3>Cenário atual</h3><ul><li>Trade pouco integrado</li><li>Comunicação e calendário a fortalecer</li><li>Processos de eventos fragmentados</li><li>Falta de indicadores consolidados</li><li>Lacuna em estrutura de maior capacidade para eventos</li></ul></div><div class="arrow">→</div><div class="box"><h3>Chaves de transformação</h3><ul><li>Governança e mobilização</li><li>Fluxo integrado para eventos</li><li>Receptivo e excelência no atendimento</li><li>Inteligência do turismo</li><li>Comunicação integrada do destino</li></ul></div><div class="arrow">→</div><div class="box"><h3>Cenário 2036</h3><ul><li>Referência nacional em negócios e entretenimento</li><li>Receptivo atuante e qualificado</li><li>Serviços reconhecidos pela excelência</li><li>Ambiente regulatório ágil e seguro</li><li>Impactos mensurados por indicadores</li></ul></div></div></section>
@@ -260,8 +267,8 @@
   </div>
 
   <div class="meeting-seq">
-    <div class="meeting-card">
-      <div class="meeting-head"><div class="meeting-num">1</div><div><h3>Reunião de validação do conteúdo da primeira conversa sobre cenários</h3>
+    <div class="meeting-card done-card">
+      <div class="meeting-head"><div class="meeting-num">✓</div><div><div class="meeting-status done">✓ Realizada</div><h3>Reunião de validação do conteúdo da primeira conversa sobre cenários</h3>
       <div class="meeting-question">“O conteúdo registrado na primeira conversa representa corretamente a visão do Cluster sobre o cenário atual, os desafios, as causas, o cenário desejado e as transformações necessárias?”</div></div></div>
       <ul>
         <li>Apresentar ao grupo a síntese consolidada da primeira conversa e o BI construído a partir dela.</li>
@@ -270,11 +277,11 @@
         <li>Revisar indicadores, ações, dados necessários e questões que ficaram para aprofundamento.</li>
         <li>Registrar divergências, ajustes e consensos antes de avançar para as próximas pautas.</li>
       </ul>
-      <div class="meeting-output"><b>Entrega esperada:</b> conteúdo da primeira reunião validado pelo Cluster, formando uma base consensuada para orientar as cinco reuniões seguintes.</div>
+      <div class="meeting-output"><b>Resultado da reunião:</b> conteúdo da primeira reunião validado pelo Cluster, formando uma base consensuada para orientar as cinco reuniões seguintes.</div>
     </div>
 
     <div class="meeting-card">
-      <div class="meeting-head"><div class="meeting-num">2</div><div><h3>Do planejado ao executado: onde estamos?</h3>
+      <div class="meeting-head"><div class="meeting-num">2</div><div><div class="meeting-status next">Próxima reunião</div><h3>Do planejado ao executado: onde estamos?</h3>
       <div class="meeting-question">“De tudo o que Rio Preto já planejou para o Turismo, o que foi executado, o que está em andamento, o que não avançou e o que ainda faz sentido?”</div></div></div>
       <ul>
         <li>Usar a aba <b>Planejado × Executado</b> como roteiro da reunião.</li>
@@ -286,7 +293,7 @@
     </div>
 
     <div class="meeting-card">
-      <div class="meeting-head"><div class="meeting-num">3</div><div><h3>Visite Rio Preto e governança do Turismo</h3>
+      <div class="meeting-head"><div class="meeting-num">3</div><div><div class="meeting-status planned">Planejada</div><h3>Visite Rio Preto e governança do Turismo</h3>
       <div class="meeting-question">“Qual deve ser, efetivamente, o papel do Visite Rio Preto e como organizar a governança do turismo?”</div></div></div>
       <ul>
         <li>Validar o estágio real do Visite Rio Preto.</li>
@@ -298,7 +305,7 @@
     </div>
 
     <div class="meeting-card">
-      <div class="meeting-head"><div class="meeting-num">4</div><div><h3>Rio Preto como destino de eventos</h3>
+      <div class="meeting-head"><div class="meeting-num">4</div><div><div class="meeting-status planned">Planejada</div><h3>Rio Preto como destino de eventos</h3>
       <div class="meeting-question">“Que eventos Rio Preto quer atrair?”</div></div></div>
       <ul>
         <li>Validar os segmentos prioritários já apontados: <b>Médico/Hospitalar, Agronegócios, Tecnologia da Informação e Educação</b>.</li>
@@ -310,7 +317,7 @@
     </div>
 
     <div class="meeting-card">
-      <div class="meeting-head"><div class="meeting-num">5</div><div><h3>Ambiente regulatório e facilidade para realizar eventos</h3>
+      <div class="meeting-head"><div class="meeting-num">5</div><div><div class="meeting-status planned">Planejada</div><h3>Ambiente regulatório e facilidade para realizar eventos</h3>
       <div class="meeting-question">“O que hoje torna mais difícil realizar um evento em Rio Preto e o que pode ser simplificado?”</div></div></div>
       <ul>
         <li>Usar o compilado regulatório já produzido como base técnica.</li>
@@ -322,7 +329,7 @@
     </div>
 
     <div class="meeting-card">
-      <div class="meeting-head"><div class="meeting-num">6</div><div><h3>Inteligência Turística: quais números vamos acompanhar?</h3>
+      <div class="meeting-head"><div class="meeting-num">6</div><div><div class="meeting-status planned">Planejada</div><h3>Inteligência Turística: quais números vamos acompanhar?</h3>
       <div class="meeting-question">“Como saberemos, daqui a dois ou três anos, se o turismo de Rio Preto realmente avançou?”</div></div></div>
       <ul>
         <li>Revisar indicadores já propostos no Plano de Negócios e na Agenda Rio Preto Turismo.</li>
@@ -368,7 +375,7 @@
       <div class="deliverable"><h4>5. Painel oficial de indicadores</h4><p>Conjunto enxuto de indicadores com conceito, fonte, linha de base, periodicidade, responsável e metas quando aplicável. <b>Contribuição:</b> permite acompanhar resultados e evolução do turismo ao longo do tempo.</p></div>
       <div class="deliverable"><h4>6. Carteira de projetos prioritários</h4><p>Organização das principais iniciativas com responsável, prazo, indicador e status. <b>Contribuição:</b> conecta estratégia à execução e facilita o acompanhamento da Governança.</p></div>
       <div class="deliverable"><h4>7. Agenda para o próximo ciclo</h4><p>Temas estruturantes organizados para aprofundamento posterior: infraestrutura, calendário, receptivo, turismo regional, tecnologia e interclusters. <b>Contribuição:</b> dá continuidade ao trabalho sem dispersão de prioridades.</p></div>
-      <div class="deliverable"><h4>8. Base de Inteligência</h4><p>Demandas de dados, linhas de base e indicadores organizados para acompanhamento. <b>Contribuição:</b> cria condições para apoiar a Governança com evidências e monitoramento. O Centro de Estudos Econômicos da ACIRP pode apoiar aqui.</p></div>
+      <div class="deliverable"><h4>8. Base de Inteligência</h4><p><b>Contribuição:</b> cria condições para apoiar a Governança com evidências e monitoramento. O Centro de Estudos Econômicos da ACIRP pode apoiar aqui.</p></div>
     </div>
   </div>
 
@@ -428,6 +435,7 @@
     <p style="text-align:center;font-size:15px;line-height:1.8"><b>Cenário Atual → Causas → Transformações → Cenário Desejado → Indicadores → Ações</b></p>
   </div>
 </section>
+
 
 <section id="conjuntura" class="section">
   <div class="section-head">
